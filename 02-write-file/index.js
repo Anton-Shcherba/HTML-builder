@@ -10,5 +10,5 @@ stdin.on('data', data => data.toString().trim() === 'exit' ? process.emit('SIGIN
 
 process.on('SIGINT', () => {
   stdout.write('Удачи в изучении Node.js!');
-  setTimeout(() => exit(), 100);
+  exit();
 });
